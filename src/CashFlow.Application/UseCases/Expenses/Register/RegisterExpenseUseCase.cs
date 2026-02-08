@@ -1,24 +1,42 @@
-﻿using CashFlow.Communication.Requests;
+﻿using AutoMapper;
+using CashFlow.Communication.Requests;
 using CashFlow.Communication.Responses;
+using CashFlow.Domain.Entities;
+using CashFlow.Domain.Repositories;
+using CashFlow.Domain.Repositories.Expenses;
 using CashFlow.Exception.ExceptionsBase;
 
 namespace CashFlow.Application.UseCases.Expenses.Register;
 
-public class RegisterExpenseUseCase
+public class RegisterExpenseUseCase: IRegisterExpenseUseCase
 {
-    public ResponseRegisterExpenseJson Execute(RequestRegisterExpenseJson request)
-    {
-        Validade(request);
+    private readonly IExpensesWriteOnlyRepository _repository;
+    private readonly IUnitOfWork _unitOfWork;
+    private readonly IMapper _mapper;
 
-        return new ResponseRegisterExpenseJson
-        { 
-            Title = request.Title 
-        };
+    public RegisterExpenseUseCase(IExpensesWriteOnlyRepository repository, IUnitOfWork unitOfWork, IMapper mapper)
+    {
+        _repository = repository;
+        _unitOfWork = unitOfWork;
+        _mapper = mapper;
     }
 
-    public void Validade(RequestRegisterExpenseJson request)
+    public async Task<ResponseRegisteredExpenseJson> Execute(RequestExpenseJson request)
     {
-        var validator = new RegisterExpenseValidator();
+        Validate(request);
+
+        var entity = _mapper.Map<Expense>(request);
+
+        await _repository.Add(entity);
+
+        await _unitOfWork.Commit();
+
+        return _mapper.Map<ResponseRegisteredExpenseJson>(entity);
+    }
+
+    public void Validate(RequestExpenseJson request)
+    {
+        var validator = new ExpenseValidator();
         var result = validator.Validate(request);
 
         if (!result.IsValid)

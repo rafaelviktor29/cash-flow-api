@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.14.36221.1 d17.14
+# Visual Studio Version 18
+VisualStudioVersion = 18.0.11104.47
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
 EndProject
@@ -18,6 +18,10 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CashFlow.Exception", "src\CashFlow.Exception\CashFlow.Exception.csproj", "{5B9C505E-EAD9-45F6-B32F-8AAF6ED25BAE}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CashFlow.Infrastructure", "src\CashFlow.Infrastructure\CashFlow.Infrastructure.csproj", "{01F5066C-1D69-44A1-AA86-9BF0E3D0D1F0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Validators.Tests", "tests\Validators.Tests\Validators.Tests.csproj", "{CDFCBDEE-4DB4-4C37-8DFA-BDF1DC83E4A9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonTestUtilities", "tests\CommonTestUtilities\CommonTestUtilities.csproj", "{30E520A4-E768-4D3B-A96D-3D5411378BDE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -49,6 +53,14 @@ Global
 		{01F5066C-1D69-44A1-AA86-9BF0E3D0D1F0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{01F5066C-1D69-44A1-AA86-9BF0E3D0D1F0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{01F5066C-1D69-44A1-AA86-9BF0E3D0D1F0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDFCBDEE-4DB4-4C37-8DFA-BDF1DC83E4A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDFCBDEE-4DB4-4C37-8DFA-BDF1DC83E4A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDFCBDEE-4DB4-4C37-8DFA-BDF1DC83E4A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDFCBDEE-4DB4-4C37-8DFA-BDF1DC83E4A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30E520A4-E768-4D3B-A96D-3D5411378BDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30E520A4-E768-4D3B-A96D-3D5411378BDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30E520A4-E768-4D3B-A96D-3D5411378BDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30E520A4-E768-4D3B-A96D-3D5411378BDE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +72,8 @@ Global
 		{DC24D882-0545-41A4-AC9D-29D23C47221E} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{5B9C505E-EAD9-45F6-B32F-8AAF6ED25BAE} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 		{01F5066C-1D69-44A1-AA86-9BF0E3D0D1F0} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{CDFCBDEE-4DB4-4C37-8DFA-BDF1DC83E4A9} = {8CC7F8F6-3F87-4041-B38E-3BC664A34A85}
+		{30E520A4-E768-4D3B-A96D-3D5411378BDE} = {8CC7F8F6-3F87-4041-B38E-3BC664A34A85}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {27993505-D306-4504-A14F-0EC52CE353E2}
