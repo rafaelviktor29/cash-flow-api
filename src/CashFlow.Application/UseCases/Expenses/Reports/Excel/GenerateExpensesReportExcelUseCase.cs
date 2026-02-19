@@ -1,7 +1,4 @@
-﻿
-using CashFlow.Domain.Enums;
-using CashFlow.Domain.Extensions;
-using CashFlow.Domain.PaymentTypes;
+﻿using CashFlow.Domain.Extensions;
 using CashFlow.Domain.Reports;
 using CashFlow.Domain.Repositories.Expenses;
 using ClosedXML.Excel;

@@ -7,11 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Update="PaymentTypes\ResourcePaymentType.Designer.cs">
-      <DesignTime>True</DesignTime>
-      <AutoGen>True</AutoGen>
-      <DependentUpon>ResourcePaymentType.resx</DependentUpon>
-    </Compile>
     <Compile Update="Reports\ResourceReportGenerationMessages.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -40,10 +35,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="PaymentTypes\ResourcePaymentType.resx">
-      <Generator>PublicResXFileCodeGenerator</Generator>
-      <LastGenOutput>ResourcePaymentType.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
     <EmbeddedResource Update="Reports\ResourceReportGenerationMessages.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>ResourceReportGenerationMessages.Designer.cs</LastGenOutput>
