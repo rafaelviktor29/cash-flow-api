@@ -135,4 +135,19 @@
   <data name="EXPENSE_NOT_FOUND" xml:space="preserve">
     <value>Gasto no encontrado.</value>
   </data>
+  <data name="NAME_EMPTY" xml:space="preserve">
+    <value>El nombre no puede estar vacío.</value>
+  </data>
+  <data name="EMAIL_EMPTY" xml:space="preserve">
+    <value>La dirección de correo electrónico no puede estar vacía.</value>
+  </data>
+  <data name="EMAIL_INVALID" xml:space="preserve">
+    <value>La dirección de correo electrónico no es válida.</value>
+  </data>
+  <data name="INVALID_PASSWORD" xml:space="preserve">
+    <value>Su contraseña debe tener al menos 8 caracteres, contener al menos una letra mayúscula, una letra minúscula, un número y un carácter especial (por ejemplo, !, ?, ").</value>
+  </data>
+  <data name="EMAIL_ALREADY_REGISTERED" xml:space="preserve">
+    <value>Esta dirección de correo electrónico ya está en uso.</value>
+  </data>
 </root>
